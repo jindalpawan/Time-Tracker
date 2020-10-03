@@ -1,0 +1,9 @@
+<h1>Complete List</h1>
+<h3>Project Name| Task Name | Start time |  End time</h3>
+<ul>
+{% for timing in object_list %}
+    <li>{{timing.project.name}}-- {{timing.task}}-- {{ timing.start|date }} - {{ timing.end|date }}</li>
+{% empty %}
+    <li>No timings yet.</li>
+{% endfor %}
+</ul>
