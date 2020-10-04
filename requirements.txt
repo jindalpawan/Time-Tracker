@@ -14,15 +14,10 @@ psycopg2==2.8.5
 psycopg2-binary==2.8.5
 python3-openid==3.1.0
 pyasn1==0.1.9
-pycurl==7.43.0
-pygobject==3.20.0
-python-debian==0.1.27
 pytz==2020.1
 requests==2.9.1
 six==1.10.0
 sqlparse==0.3.1
-stevedore==3.2.2
-virtualenv==15.0.1
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 xdiagnose==3.8.4.1
