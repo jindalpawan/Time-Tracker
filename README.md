@@ -4,9 +4,9 @@ It has the following functionalities:'
 
   Time:
     - Add Timing
-      * Select Project name
-      * Enter Task name
-      * Click on End task(when stop working)
+     * Select Project name
+     * Enter Task name
+     * Click on End task(when stop working)
     - See previous timings
     
 
