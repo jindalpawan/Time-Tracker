@@ -1,13 +1,12 @@
 # Time Tracker
 
 It has the following functionalities:'
-
-  Time:
-    - Add Timing
-     * Select Project name
-     * Enter Task name
-     * Click on End task(when stop working)
-    - See previous timings
+ 
+ 1. See privious timings
+ 2. Add Timing
+ 	- Select Project name
+    - Enter Task name
+    - Click on End task(when stop working)
     
 
 To get involved in this project 
