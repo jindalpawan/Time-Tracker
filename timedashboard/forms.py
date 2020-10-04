@@ -1,5 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
+from .models import Timing, Project
+
 
 class SignupForm(forms.ModelForm):
 	password = forms.CharField(widget=forms.PasswordInput,label="Password")
@@ -24,3 +26,13 @@ class SignupForm(forms.ModelForm):
 		if commit is True:
 			user.save()
 		return user
+
+
+class CreateTimingForm(forms.ModelForm):
+	class Meta:
+		model=Timing
+		fields= ['project', 'task']
+
+	def __init__(self, *args,**kwargs):
+		super().__init__(*args, **kwargs)
+		self.fields['project'].queryset = Project.objects.all()

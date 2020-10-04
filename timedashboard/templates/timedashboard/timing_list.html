@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Home</title>
+</head>
+<body>
+    <a href="{% url 'timedashboard:createtime' %}"> <button> Start New Work</button></a>
+	<a href="{% url 'timedashboard:logout' %}"> <button>Logout </button></a>
+	<h1>{{request.user.first_name}} {{request.user.last_name}}</h1>
+	<h1>Complete List</h1>
+	<table>
+		<tr>
+			<td><b>Project Name</b></td>
+			<td style="text-align: center"><b>Task Name</b></td>
+			<td style="text-align: center"><b>Start time</b></td>
+			<td style="text-align: center"><b>End time</b></td>
+		</tr>
+		{% for timing in object_list %}
+			<tr>
+				<td>{{timing.project.name}}</td>
+				<td>{{timing.task}}</td>
+				<td>{{timing.start}}</td>
+				{% if timing.end is None %}
+					<td><a href="{% url 'timedashboard:endtask' pk=timing.pk %}"> <button>End Task</button></a></td>
+				{% else %}
+					<td>{{timing.end}}</td>
+				{% endif %}
+			</tr>
+			{% empty %}
+		    <h3>No timings yet.</h3>
+		{% endfor %}
+
+	</table>
+</body>
+</html>
+
+
