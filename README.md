@@ -2,9 +2,12 @@
 
 It has the following functionalities:'
 
-  A. Time:
-    1. Add Timing(Select Project name, enter Task name, click on End task(when stop working))
-    2. See previous timings
+  Time:
+    - Add Timing
+      * Select Project name
+      * Enter Task name
+      * Click on End task(when stop working)
+    - See previous timings
     
 
 To get involved in this project 
