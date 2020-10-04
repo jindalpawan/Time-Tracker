@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "&r%cym!_yb+z)v(9em^_8^ro_r7ba)q7k+$)!*2sh((693no&h"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -124,8 +124,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGOUT_REDIRECT_URL= "/signup/"
-LOGIN_REDIRECT_URL= "/createtime"
+LOGOUT_REDIRECT_URL = "/signup/"
+LOGIN_REDIRECT_URL = "/createtime"
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
