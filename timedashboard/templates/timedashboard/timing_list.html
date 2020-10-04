@@ -6,24 +6,24 @@
 <body>
     <a href="{% url 'timedashboard:createtime' %}"> <button> Start New Work</button></a>
 	<a href="{% url 'timedashboard:logout' %}"> <button>Logout </button></a>
-	<h1>{{request.user.first_name}} {{request.user.last_name}}</h1>
-	<h4>Complete List</h4>
+	<h2>{{request.user.first_name}} {{request.user.last_name}}</h2>
+	<h3 style="padding:0 10px 0 10px;">Complete List</h3>
 	<table>
 		<tr>
-			<td><b>Project Name</b></td>
-			<td style="text-align: center"><b>Task Name</b></td>
-			<td style="text-align: center"><b>Start time</b></td>
-			<td style="text-align: center"><b>End time</b></td>
+			<td style="text-align: center; padding:0 10px 0 10px;"><b>Project Name</b></td>
+			<td style="text-align: center; padding:0 10px 0 10px;"><b>Task Name</b></td>
+			<td style="text-align: center; padding:0 10px 0 10px;"><b>Start time</b></td>
+			<td style="text-align: center; padding:0 10px 0 10px;"><b>End time</b></td>
 		</tr>
 		{% for timing in object_list %}
 			<tr>
-				<td>{{timing.project.name}}</td>
-				<td>{{timing.task}}</td>
-				<td>{{timing.start}}</td>
+				<td style="text-align: center; padding:0 10px 0 10px;">{{timing.project.name}}</td>
+				<td style="text-align: center; padding:0 10px 0 10px;">{{timing.task}}</td>
+				<td style="text-align: center; padding:0 10px 0 10px;">{{timing.start}}</td>
 				{% if timing.end is None %}
-					<td><a href="{% url 'timedashboard:endtask' pk=timing.pk %}"> <button>End Task</button></a></td>
+					<td style="text-align: center; padding:0 10px 0 10px;"><a href="{% url 'timedashboard:endtask' pk=timing.pk %}"> <button>End Task</button></a></td>
 				{% else %}
-					<td>{{timing.end}}</td>
+					<td style="text-align: center; padding:0 10px 0 10px;">{{timing.end}}</td>
 				{% endif %}
 			</tr>
 			{% empty %}
