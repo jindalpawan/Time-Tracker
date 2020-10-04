@@ -7,7 +7,7 @@
     <a href="{% url 'timedashboard:createtime' %}"> <button> Start New Work</button></a>
 	<a href="{% url 'timedashboard:logout' %}"> <button>Logout </button></a>
 	<h1>{{request.user.first_name}} {{request.user.last_name}}</h1>
-	<h1>Complete List</h1>
+	<h4>Complete List</h4>
 	<table>
 		<tr>
 			<td><b>Project Name</b></td>
@@ -33,5 +33,3 @@
 	</table>
 </body>
 </html>
-
-

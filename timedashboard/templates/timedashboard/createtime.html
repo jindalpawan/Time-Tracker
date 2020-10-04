@@ -5,7 +5,7 @@
     <meta charset="UTF-8">    
 </head>
 <body>
-    <a href="{% url 'timedashboard:listtiming' %}"> <button>Home </button></a>
+    <a href="{% url 'timedashboard:listtiming' %}"> <button>Previous Timings</button></a>
     <a href="{% url 'timedashboard:logout' %}"> <button>Logout </button></a>
     <form method="POST"> 
         {% csrf_token %} 

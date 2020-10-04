@@ -1,14 +1,6 @@
 from django.contrib import admin
 from .models import Project, Timing
-# Register your models here.
 
-
-class ProjectAdmin(admin.ModelAdmin):
-	fields= ['name']
-
-# class TimingAdmin(admin.ModelAdmin):
-# 	fields= ['task', 'projects', 'user', 'start', 'end']
-
-
+# provide access to admin of Timing and Project models.
 admin.site.register(Timing)
-admin.site.register(Project, ProjectAdmin)
+admin.site.register(Project)
