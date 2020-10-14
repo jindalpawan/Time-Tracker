@@ -1,5 +1,7 @@
 # Time Tracker
 
+A time-entry application to track user's time and work(on which project's task user-worked). It shows all the previous timings with the project and task name.
+
 It has the following functionalities:'
  
  1. See privious timings
